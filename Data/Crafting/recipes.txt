@@ -1,0 +1,131 @@
+All Recipes
+{
+    Crude Bow
+    {
+        Script = "Scripts/Recipes/DefaultRecipe.lua"
+
+        LuaData
+        {
+            craftTime = 3.0
+
+            Components
+            {
+                Wood
+                {
+                    "Long Shaft" = 1
+                }
+                Bindings
+                {
+                    "Vines" = 1
+                }
+            }
+            //Crafting Tool
+            //{
+            //    category = "Knife"
+            //    tier = 2
+            //}
+            Results
+            {
+                "Crude Bow" = 1
+            }
+            Crafting Stations Optional
+            {
+                Crude Workbench
+                {
+                    craftTime = 2.0
+                }
+                Crafting Rock
+                {
+                    craftTime = 1.5
+                }
+                Crafting Stump
+                {
+                    craftTime = 1.0
+                }
+            }
+        }
+    }
+    Crude CrossBow
+    {
+        Script = "Scripts/Recipes/DefaultRecipe.lua"
+
+        LuaData
+        {
+            craftTime = 3.0
+
+            Components
+            {
+                Wood
+                {
+                    "Chopped Wood" = 1
+                }
+                Bindings
+                {
+                    "Vines" = 1
+                }
+                Stick
+                {
+                    "Long Shaft" = 1
+                }
+            }
+            //Crafting Tool
+            //{
+            //    category = "Knife"
+            //    tier = 2
+            //}
+            Results
+            {
+                "Crude CrossBow" = 1
+            }
+            Crafting Stations Optional
+            {
+                Crude Workbench
+                {
+                    craftTime = 2.0
+                }
+                Crafting Rock
+                {
+                    craftTime = 1.5
+                }
+                Crafting Stump
+                {
+                    craftTime = 1.0
+                }
+            }
+        }
+    }
+    Arrow
+    {
+        Script = "Scripts/Recipes/ArrowRecipe.lua"
+
+        LuaData
+        {
+            craftTime = 3.0
+            Components
+            {
+                Wood
+                {
+                    "Chopped Wood" = 1
+                }
+                Binding
+                {
+                    "Large Leaf" = 1
+                }
+                Tip
+                {
+                    "Loose Pebbles" = 8
+                }
+
+            }
+            Crafting Tool
+            {
+                category = "Knife"
+                tier = 2
+            }
+            Results
+            {
+                "Arrow" = 8
+            }
+        }
+    }
+}

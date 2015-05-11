@@ -1,0 +1,95 @@
+
+GameObjects
+{
+	PlaceableObject
+	{
+		Arrow Projectile
+		{
+			Transform
+			{
+			}
+			
+			Script
+			{
+				file = "Scripts/Objects/Weapons/StoneProjectile.lua"
+				class = "StoneProjectile"
+				arguments
+				{
+					incorrectTierCap = 0
+					encumbrance = 1
+					
+					CriticalHitPoints = 8.0
+					CreakingSound = "ItemCreak"
+					BreakSound = "ItemBreak"
+					
+					Affects
+					{
+						"Flesh" = 3
+					}
+				}
+			}
+
+			StaticGraphics
+			{
+				model = "Character/Weapons/bow/arrow.obj"
+				dontCastShadows = 1.0
+				
+				Diffuse
+				{
+					"arrow" = "Character/Weapons/bow/arrow_diff.tga"
+				}
+
+				//Normal
+				//{
+				//	"stone" = "Character/Weapons/slingshot_norm.tga"
+				//}
+			}
+
+			RigidBody
+			{
+				activePhysics = 1
+				mass = 15.0
+				friction = 6.0
+			}
+
+			Equipable
+			{
+				name = "Arrow Projectile"
+				//icon = "slingshot_stone"
+				minScale = 1.0
+				maxScale = 1.0
+				
+				category = "Weapon"
+				tier = 3
+				damageToCharacters = 19.0
+				damageToObjects = 7.0
+				maxStackCount = 100.0
+				weaponRange = 7.0
+
+				miningEmitter = "Slingshot Stone Break Emitter"
+				miningEmitterAlt = "Strike WoodLight Emitter"
+				
+				Equipment Slots
+				{
+					Tool
+				}
+			}
+			// ooh...... :P
+			Children
+			{
+				Projectile Ribbon Emitter
+				{
+				
+				}
+				//Slingshot Stone Break Emitter
+				//{
+				//
+				//}
+			}
+            Placeable
+            {
+                survivalRotOffset = [0.0, 1.0, 0.0, 90.0]
+            }
+		}
+	}
+}

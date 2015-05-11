@@ -1,0 +1,97 @@
+
+GameObjects
+{
+	PlaceableObject
+	{
+		Crude CrossBow
+		{
+			Transform
+			{
+			}
+			Script
+			{
+				file = "Scripts/Objects/Weapons/NoStanceRangedWeapon.lua"
+				class = "NoStanceRangedWeapon"
+			
+				arguments
+				{
+					incorrectTierCap = 0
+					encumbrance = 0.85
+					dataMetricCategory = "Crude CrossBow"
+					
+					ammoUsed = "arrow"
+					forceModifier = 3.5
+					damageModifier = 0.75
+					
+					CriticalHitPoints = 8.0
+					CreakingSound = "ItemCreak"
+					BreakSound = "ItemBreak"
+
+					dataMetricCategory = "Weapon CrossBow"
+					UBPcraft = 4
+					LBPcraft = 5
+					XPcraft = 9
+                    
+                    offset = <-0.314, 0.126, -0.02>
+                    swingtransition = "Skin"
+                    
+					swinganimations
+					{
+						"Skin_Loop"
+					}
+
+					Affects
+					{
+						"Flesh" = 3
+					}
+				}
+			}
+			StaticGraphics
+			{
+				model = "Character/Weapons/crossbow/crossbow.obj"
+				dontCastShadows = 1.0
+			
+				Diffuse
+				{
+					"crossbow" = "Character/Weapons/crossbow/crossbow_diff.tga"
+
+				}
+				Normal
+				{
+					crossbow = "Character/Weapons/bow/bow_norm.tga"
+				}
+			}
+			RigidBody
+			{
+				activePhysics = 1
+				mass = 1.0
+				friction = 5.0
+			}
+			Equipable
+			{
+				name = "Crude CrossBow"
+				icon = "crossbow_icon"
+				minScale = 1.0
+				maxScale = 1.0
+				
+				category = "Knife"
+				tier = 3
+				resource = 1
+				durability = 540.0
+				durabilityLossOnCorrect = 3.0
+				weaponRange = 7.0
+				maxStackCount = 1.0
+
+				placementSound = "GrassPlace"
+				miningEmitter = "Strike Glint Emitter"
+				
+				handleType = "one"
+				
+				Equipment Slots
+				{
+					Tool
+				}
+			}
+		}
+	}
+}

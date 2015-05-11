@@ -1,0 +1,20 @@
+Manifest
+{
+	# Name of the mods.
+	Name = "Useful Things"
+
+	# Description of the mod.
+	Description = "Simple Mod to add simple fun content"
+
+	# The major version number.
+	MajorVersion = 1.0
+
+	# The minor version number.
+	MinorVersion = 0.0
+
+	# The file path to the script that is the entry point.
+	ScriptFile = "Scripts/UsefullThings.lua"
+
+	# The script entry point class name
+	ScriptClass = "UsefullThings"
+}

@@ -1,0 +1,69 @@
+GameObjects
+{
+	PlaceableObject
+	{
+		Arrow
+		{
+			Transform
+			{
+			}
+			Script
+			{
+				file = "Scripts/Objects/PlaceableObject.lua"
+				class = "PlaceableObject"
+				
+				arguments
+				{
+					encumbrance = 0.3
+					
+					ammoType = "arrow"
+					
+					Projectile
+					{
+						name = "Arrow Projectile"
+						strikeThreshold = -0.5
+						force = 25.0
+						damage = 25.0
+					}
+				}
+			}
+			
+			StaticGraphics
+			{
+				model = "Character/Weapons/bow/arrow.obj"
+				
+				Diffuse
+				{
+					"arrow" = "Character/Weapons/bow/arrow_diff.tga"
+				}
+				//Normal
+				//{
+				//	0 = "Models/PlaceableObjects/Harvestables/rockPebbles_norm.tga"
+				//}
+			}
+			
+			RigidBody
+			{
+				activePhysics = 1
+				mass = 15.0
+				friction = 6.0
+			}
+			
+			Placeable
+			{
+				name = "Arrow"
+				icon = "arrow_icon"
+				minScale = 1.0
+				maxScale = 2.0
+
+				category = "Arrow"
+				tier = 4
+				resource = 1
+				maxStackCount = 600
+				durabilityLossOnCorrect = 1.0
+                survivalRotOffset = [0.0, 1.0, 0.0, 90.0]
+				placementSound = "StonePlace"
+			}
+		}
+	}
+}
